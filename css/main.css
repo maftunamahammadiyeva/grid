@@ -368,6 +368,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: black;
+  background-color: aliceblue;
 }
 
 img {
@@ -389,7 +390,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1157px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -403,180 +404,110 @@ img {
   border-radius: 5px;
 }
 
-.site-header {
-  padding: 8px 0;
-  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.site-header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.site-header__logo {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-.site-header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  white-space: nowrap;
-}
-
-.site-header__nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-right: 10px;
-}
-
-.site-header__nav-link {
-  padding: 16px;
-  text-decoration: none;
-  color: black;
-}
-
-.site-header__hamburger {
-  border: none;
-  background-color: transparent;
-  display: none;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/bars-solid.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-@media only screen and (max-width: 730px) {
-  .site-header {
-    padding: 18px 0;
-    position: relative;
-  }
-  .site-header__nav {
-    display: none;
-  }
-  .site-header__hamburger {
-    display: inline-block;
-  }
-  .site-header--open .site-header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    padding: 20px;
-    top: 100%;
-    left: 0;
-    background-color: #1e90ff;
-    width: 100%;
-  }
-  .site-header--open .site-header__nav-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .site-header--open .button {
-    background-color: orange;
-  }
-  .site-header--open .site-header__hamburger {
-    background-image: url("../images/xmark-solid.svg");
-  }
-}
-
 .main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.hero {
-  padding: 80px 0px;
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "d d jo  kira" "je p p kira";
+  -ms-grid-columns: 300px 300px 300px 300px;
+      grid-template-columns: 300px 300px 300px 300px;
+  -ms-grid-rows: 380px 380px;
+      grid-template-rows: 380px 380px;
 }
 
-.hero__container {
+.list__item {
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
+}
+
+.list__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.hero__left {
-  max-width: 470px;
+.list__img {
+  border-radius: 30px;
+  margin-right: 20px;
 }
 
-.hero__heading {
+.list__heading {
+  font-size: 16px;
   margin: 0;
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 130%;
 }
 
-.hero__desc {
+.list__desc {
   margin: 0;
-  margin-bottom: 16px;
-  line-height: 24px;
+  opacity: 0.7;
+  font-size: 14px;
 }
 
-.hero__iframe {
-  border: none;
-  border-radius: 10px;
+.list__heading-bottom {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
-@media only screen and (max-width: 980px) {
-  .hero {
-    padding: 40px 0px;
-  }
-  .hero__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .hero__left {
-    max-width: 100%;
-  }
-  .hero__iframe {
-    margin-top: 20px;
-    width: 100%;
-  }
+.list__block {
+  margin: 0;
+  margin-top: 24px;
+  font-size: 16px;
 }
 
-@media only screen and (max-width: 480px) {
-  .hero__heading {
-    font-size: 25px;
-  }
-  .hero__desc {
-    font-size: 14px;
-  }
+.d {
+  background-color: #600080;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: d;
+}
+
+.jo {
+  background-color: grey;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: jo;
+}
+
+.kira {
+  color: #000;
+  background-color: white;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: kira;
+}
+
+.je {
+  color: #000;
+  background-color: white;
+  opacity: 0.7;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: je;
+}
+
+.p {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+  background-color: black;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: p;
 }
 /*# sourceMappingURL=main.css.map */

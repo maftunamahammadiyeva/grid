@@ -1,3 +1,94 @@
 .main {
   flex-grow: 1;
 }
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  display: grid;
+  grid-template-areas:
+  "d d jo  kira"
+  "je p p kira";
+
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows:  380px 380px;
+
+
+  &__item {
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img{
+    border-radius: 30px;
+    margin-right: 20px;
+  }
+
+  &__heading {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  &__desc {
+    margin: 0;
+    opacity: 0.7;
+    font-size: 14px;
+  }
+
+  &__heading-bottom {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  &__block{
+    margin: 0;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+
+}
+
+.d{
+ background-color: rgb(96, 0, 128);
+//  grid-column: 1 / span 2;
+grid-area: d;
+}
+
+.jo{
+  background-color: grey;
+  grid-area: jo;
+
+}
+
+.kira{
+  color: #000;
+  background-color: white;
+  grid-area: kira;
+
+
+
+}
+
+.je{
+  color: #000;
+  background-color: white;
+  opacity: 0.7;
+  grid-area: je;
+}
+
+
+.p {
+ grid-column: 2 / span 2;
+ background-color: black;
+ grid-area: p;
+}
