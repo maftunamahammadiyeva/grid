@@ -59,9 +59,9 @@
 }
 
 .d{
- background-color: rgb(96, 0, 128);
-//  grid-column: 1 / span 2;
-grid-area: d;
+  background-color: rgb(96, 0, 128);
+  //  grid-column: 1 / span 2;
+  grid-area: d;
 }
 
 .jo{
@@ -88,7 +88,24 @@ grid-area: d;
 
 
 .p {
- grid-column: 2 / span 2;
- background-color: black;
- grid-area: p;
+  grid-column: 2 / span 2;
+  background-color: black;
+  grid-area: p;
+}
+
+@media only screen and (max-width: 500px){
+  .list {
+    grid-template-areas:
+    "d d d d"
+    "jo jo jo jo"
+    "kira kira kira kira"
+    "je je je je"
+    "p p p p";
+
+    grid-template-columns: 1fr;
+
+    &__item {
+      padding-bottom: 10px;
+    }
+  }
 }
